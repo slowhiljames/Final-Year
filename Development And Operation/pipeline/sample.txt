@@ -1,0 +1,13 @@
+#this is just a sample text fiile for adding in an gitlab
+
+
+#What I did to connect
+
+#Follows following things---1>Create gitlab account
+                            2>git clone (Paste the url of gitlab repository)
+                            3>type as it is ...echo "Hello, Gitlab"
+                            4>cd (File name)
+                            5>git add sample.txt 
+                            6>git commit -m"This is an sample text file"
+                            7>git push origin main
+

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>profile</groupId>
+    <artifactId>profile</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+
+    <!-- Profiles for different environments -->
+    <profiles>
+        
+        <!-- Development Profile -->
+        <profile>
+            <id>development</id>
+            <properties>
+                <env>development</env>
+                <config.file>config-dev.properties</config.file>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault> <!-- Activates this profile by default -->
+            </activation>
+        </profile>
+        
+        <!-- Testing Profile -->
+        <profile>
+            <id>testing</id>
+            <properties>
+                <env>testing</env>
+                <config.file>config-test.properties</config.file>
+            </properties>
+            <build>
+                <plugins>
+                    <!-- Additional plugins or settings for testing can be added here -->
+                </plugins>
+            </build>
+        </profile>
+        
+        <!-- Production Profile -->
+        <profile>
+            <id>production</id>
+            <properties>
+                <env>production</env>
+                <config.file>config-prod.properties</config.file>
+            </properties>
+            <build>
+                <plugins>
+                    <!-- Additional plugins or settings for production can be added here -->
+                </plugins>
+            </build>
+        </profile>
+        
+    </profiles>
+
+</project>
